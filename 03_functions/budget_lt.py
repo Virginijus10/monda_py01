@@ -11,3 +11,55 @@ Reikalavimai
 * Suskaičiuoti biudžeto balansą
 
 """
+
+pelno_nuostolio_ataskaita = []
+
+def prideti_pajamas(suma):
+    if suma > 0:
+        pelno_nuostolio_ataskaita.append(('Pajamos', suma))
+        print(f"Pajamos pridėtos: +{suma}")
+    else:
+        print("Netinkama suma pajamoms")
+
+def atimti_islaidas(atimti):
+    if atimti > 0:
+        pelno_nuostolio_ataskaita.append(('Išlaidos', -atimti))
+        print(f"Išlaidos atimtos: -{atimti}")
+    else:
+        print("Netinkama suma išlaidoms")
+
+        
+
+
+def didzioji_knyga():
+    print("Pajamu/Išlaidu žurnalas:")
+    if not pelno_nuostolio_ataskaita:
+        print("Žurnalas tuščias")
+    else:
+        for irasas in pelno_nuostolio_ataskaita:
+            print(f"{irasas[0]}: {irasas[1]}")
+
+def pajamu_islaidu_suvestine():
+    balansas = sum(sumos for (sumos) in pelno_nuostolio_ataskaita)
+    print(f"Biudžeto balansas: {balansas}")
+
+while True:
+    veiksmas = input("Norite pridėti pajamas (p) ar išlaidas (i)? Arba norite atimti išlaidas (a)? Arba spausdinti žurnalą (s)? Arba baigti (q)? ").lower()
+
+    if veiksmas == 'p':
+        suma = float(input("Įveskite sumą pajamoms: "))
+        prideti_pajamas(suma)
+    elif veiksmas == 'i':
+        islaidos = float(input("Įveskite sumą išlaidoms: "))
+        atimti_islaidas(islaidos)
+    elif veiksmas == 's':
+        pinigu_likutis = suma - islaidos
+        print(pinigu_likutis)
+    
+        break
+    else:
+        print("Netinkamas pasirinkimas, bandykite dar kartą")
+
+
+
+
