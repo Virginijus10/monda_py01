@@ -28,21 +28,6 @@ def atimti_islaidas(atimti):
     else:
         print("Netinkama suma išlaidoms")
 
-        
-
-
-def didzioji_knyga():
-    print("Pajamu/Išlaidu žurnalas:")
-    if not pelno_nuostolio_ataskaita:
-        print("Žurnalas tuščias")
-    else:
-        for irasas in pelno_nuostolio_ataskaita:
-            print(f"{irasas[0]}: {irasas[1]}")
-
-def pajamu_islaidu_suvestine():
-    balansas = sum(sumos for (sumos) in pelno_nuostolio_ataskaita)
-    print(f"Biudžeto balansas: {balansas}")
-
 while True:
     veiksmas = input("Norite pridėti pajamas (p) ar išlaidas (i)? Arba norite atimti išlaidas (a)? Arba spausdinti žurnalą (s)? Arba baigti (q)? ").lower()
 

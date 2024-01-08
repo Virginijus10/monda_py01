@@ -1,0 +1,12 @@
+
+x=8
+argumentas = (x)
+x+=1
+print("x",x)
+
+
+
+def aibe(a):
+    
+    print(a)
+aibe(5)
