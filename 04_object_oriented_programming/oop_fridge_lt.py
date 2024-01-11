@@ -47,7 +47,8 @@ class Fridge:
             self.contents.append(Product(name, quantity))
 
     def remove_product(self, name:str, quantity:float):
-        pass
+        
+        return self
 
     def print_contents(self):
         pass
