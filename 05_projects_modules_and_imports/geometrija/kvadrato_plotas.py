@@ -1,2 +1,2 @@
 def kvadrato_plotas(s):
-    return s * 2
+    return s ** 2

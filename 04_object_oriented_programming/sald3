@@ -94,6 +94,9 @@ class Fridge:
             print('Jus turite reikiamus produktus')
         else:
             print(f'Jums truksta siu produktu: {missing_ingredients}')
+    
+    def clear_recipe_history(self):
+        self.clear_recipe_history = []
             
 #Jums truksta siu produktu: [(duona, 5.0: ), (agurkas, 10.0: ), (pomidoras, 9.0: )] neveikia atitinkamai patikrinimas recepto kazkur reikia uzbaigti recepto tikrinima, nes blogai isspausdina
 def main():
