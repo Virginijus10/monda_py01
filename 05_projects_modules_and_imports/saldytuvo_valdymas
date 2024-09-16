@@ -1,0 +1,14 @@
+#Nereikalingas
+
+from saldytuviukas import class_product as Product
+product_discription = Product()
+
+from saldytuviukas import class_recipe as Recipe
+recipe_ingridients = Recipe()
+
+from saldytuviukas import class_fridge as Fridge
+fridge_instance = Fridge()
+
+from saldytuviukas import main_meniu as main
+user_interface = main()
+
